@@ -245,26 +245,37 @@
         </div>
     </div>
 </div>
- <div id="id02" class="modal">
-    <div class="modal-content">
-         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <div class="modalcontainer">
-           <p style="font-size: 20px; text-align: center;">Create an Account</p> 
-            <asp:TextBox ID="txt_FirstName" CssClass="inputtxt" Placeholder="First Name"  runat="server"></asp:TextBox>                       
-            <asp:TextBox ID="txt_LastName"  CssClass="inputtxt" Placeholder="Last Name" runat="server"></asp:TextBox> 
-            <asp:TextBox ID="txt_RegEmail"  CssClass="inputtxt" Placeholder="Email Address" TextMode="Email" runat="server"></asp:TextBox>
-            <asp:TextBox ID="txt_RegPassword" CssClass="inputtxt" Placeholder="Password" TextMode="Password"   runat="server"></asp:TextBox>
-            <asp:TextBox ID="txt_ConfirmPW" CssClass="inputtxt" Placeholder="Confirm Password"  TextMode="Password" runat="server"></asp:TextBox>
-            <asp:CompareValidator ID="CompareValidatorPW" runat="server" ErrorMessage="Passwords must match" ControlToCompare="txt_RegPassword" ControlToValidate="txt_ConfirmPW"></asp:CompareValidator> </div>
-               
-           <asp:Button ID="btnRegister" runat="server" Text="Create Account" Class="btnsignin" OnClick="btnRegister_Click"/></div>
-        <div class="register">
-            Already have an account? 
-                <a onclick="document.getElementById('id01').style.display='block'; document.getElementById('id02').style.display='none';"
-        style="font-size: small; text-align: center">Sign In
-        </a>
-     </div>
-     </div>
+<div class="modal fade" id="id02" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Create an Account</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+                       <div class="modal-body">
+                <div class="modalcontainer">
+                    <asp:TextBox ID="txt_FirstName" CssClass="inputtxt form-control mb-3" Placeholder="First Name" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txt_LastName" CssClass="inputtxt form-control mb-3" Placeholder="Last Name" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txt_RegEmail" CssClass="inputtxt form-control mb-3" Placeholder="Email Address" TextMode="Email" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txt_RegPassword" CssClass="inputtxt form-control mb-3" Placeholder="Password" TextMode="Password" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txt_ConfirmPW" CssClass="inputtxt form-control mb-3" Placeholder="Confirm Password" TextMode="Password" runat="server"></asp:TextBox>
+                    <asp:CompareValidator ID="CompareValidatorPW" runat="server" ErrorMessage="Passwords must match" ControlToCompare="txt_RegPassword" ControlToValidate="txt_ConfirmPW"></asp:CompareValidator>
+                </div>
+            </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <asp:Button ID="btnRegister" runat="server" Text="Create Account" Class="btnsignin btn btn-primary" OnClick="btnRegister_Click"/>
+    
+                    <div class="register">
+                        Already have an account? 
+                        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#id01">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

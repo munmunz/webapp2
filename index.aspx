@@ -743,57 +743,9 @@
                   
                   </div>
 
-                    
-                  <div class="showcase">
-                  
-
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/clothes-3.jpg" alt="black floral wrap midi skirt" class="showcase-img"
-                        width="70">
-                    </a>
-                  
-                    <div class="showcase-content">
-                  
-                      <a href="#">
-                        <h4 class="showcase-title">Black Floral Wrap Midi Skirt</h4>
-                      </a>
-                  
-                      <a href="#" class="showcase-category">Clothes</a>
-                  
-                      <div class="price-box">
-                        <p class="price">$76.00</p>
-                        <del>$25.00</del>
-                      </div>
-                  
-                    </div>
-                  
-                  </div>
+              
 
 
-
-                  <div class="showcase">
-                  
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/shirt-1.jpg" alt="pure garment dyed cotton shirt" class="showcase-img"
-                        width="70">
-                    </a>
-                  
-                    <div class="showcase-content">
-                  
-                      <a href="#">
-                        <h4 class="showcase-title">Pure Garment Dyed Cotton Shirt</h4>
-                      </a>
-                  
-                      <a href="#" class="showcase-category">Mens Fashion</a>
-                  
-                      <div class="price-box">
-                        <p class="price">$68.00</p>
-                        <del>$31.00</del>
-                      </div>
-                  
-                    </div>
-                  
-                  </div>
 
                 </div>
 
@@ -847,53 +799,7 @@
                 
                   </div>
                 
-                  <div class="showcase">
-                
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/jacket-3.jpg" alt="mens winter leathers jackets" class="showcase-img"
-                        width="70">
-                    </a>
-                
-                    <div class="showcase-content">
-                
-                      <a href="#">
-                        <h4 class="showcase-title">Mens Winter Leathers Jackets</h4>
-                      </a>
-                
-                      <a href="#" class="showcase-category">Jackets</a>
-                
-                      <div class="price-box">
-                        <p class="price">$50.00</p>
-                        <del>$25.00</del>
-                      </div>
-                
-                    </div>
-                
-                  </div>
-                
-                  <div class="showcase">
-                
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/shorts-1.jpg" alt="better basics french terry sweatshorts" class="showcase-img"
-                        width="70">
-                    </a>
-                
-                    <div class="showcase-content">
-                
-                      <a href="#">
-                        <h4 class="showcase-title">Better Basics French Terry Sweatshorts</h4>
-                      </a>
-                
-                      <a href="#" class="showcase-category">Shorts</a>
-                
-                      <div class="price-box">
-                        <p class="price">$20.00</p>
-                        <del>$10.00</del>
-                      </div>
-                
-                    </div>
-                
-                  </div>
+
                 
                 </div>
 
@@ -957,53 +863,8 @@
             
                   </div>
             
-                  <div class="showcase">
+               
             
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/party-wear-1.jpg" alt="womens party wear shoes" class="showcase-img"
-                        width="70">
-                    </a>
-            
-                    <div class="showcase-content">
-            
-                      <a href="#">
-                        <h4 class="showcase-title">Womens Party Wear Shoes</h4>
-                      </a>
-            
-                      <a href="#" class="showcase-category">Party wear</a>
-            
-                      <div class="price-box">
-                        <p class="price">$94.00</p>
-                        <del>$42.00</del>
-                      </div>
-            
-                    </div>
-            
-                  </div>
-            
-                  <div class="showcase">
-            
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/sports-3.jpg" alt="sports claw women's shoes" class="showcase-img"
-                        width="70">
-                    </a>
-            
-                    <div class="showcase-content">
-            
-                      <a href="#">
-                        <h4 class="showcase-title">Sports Claw Women's Shoes</h4>
-                      </a>
-            
-                      <a href="#" class="showcase-category">Sports</a>
-            
-                      <div class="price-box">
-                        <p class="price">$54.00</p>
-                        <del>$65.00</del>
-                      </div>
-            
-                    </div>
-            
-                  </div>
             
                 </div>
             
@@ -1056,52 +917,8 @@
             
                   </div>
             
-                  <div class="showcase">
             
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/shoe-1.jpg" alt="men's leather formal wear shoes" class="showcase-img"
-                        width="70">
-                    </a>
-            
-                    <div class="showcase-content">
-            
-                      <a href="#">
-                        <h4 class="showcase-title">Men's Leather Formal Wear shoes</h4>
-                      </a>
-            
-                      <a href="#" class="showcase-category">formal</a>
-            
-                      <div class="price-box">
-                        <p class="price">$56.00</p>
-                        <del>$78.00</del>
-                      </div>
-            
-                    </div>
-            
-                  </div>
-            
-                  <div class="showcase">
-            
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/shoe-2.jpg" alt="casual men's brown shoes" class="showcase-img" width="70">
-                    </a>
-            
-                    <div class="showcase-content">
-            
-                      <a href="#">
-                        <h4 class="showcase-title">Casual Men's Brown shoes</h4>
-                      </a>
-            
-                      <a href="#" class="showcase-category">Casual</a>
-            
-                      <div class="price-box">
-                        <p class="price">$50.00</p>
-                        <del>$55.00</del>
-                      </div>
-            
-                    </div>
-            
-                  </div>
+                
             
                 </div>
             
@@ -1165,53 +982,8 @@
             
                   </div>
             
-                  <div class="showcase">
+                
             
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/perfume.jpg" alt="titan 100 ml womens perfume" class="showcase-img"
-                        width="70">
-                    </a>
-            
-                    <div class="showcase-content">
-            
-                      <a href="#">
-                        <h4 class="showcase-title">Titan 100 Ml Womens Perfume</h4>
-                      </a>
-            
-                      <a href="#" class="showcase-category">Perfume</a>
-            
-                      <div class="price-box">
-                        <p class="price">$42.00</p>
-                        <del>$10.00</del>
-                      </div>
-            
-                    </div>
-            
-                  </div>
-            
-                  <div class="showcase">
-            
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/belt.jpg" alt="men's leather reversible belt" class="showcase-img"
-                        width="70">
-                    </a>
-            
-                    <div class="showcase-content">
-            
-                      <a href="#">
-                        <h4 class="showcase-title">Men's Leather Reversible Belt</h4>
-                      </a>
-            
-                      <a href="#" class="showcase-category">Belt</a>
-            
-                      <div class="price-box">
-                        <p class="price">$24.00</p>
-                        <del>$10.00</del>
-                      </div>
-            
-                    </div>
-            
-                  </div>
             
                 </div>
             
@@ -1264,53 +1036,8 @@
             
                   </div>
             
-                  <div class="showcase">
+                
             
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/shampoo.jpg" alt="shampoo conditioner packs" class="showcase-img"
-                        width="70">
-                    </a>
-            
-                    <div class="showcase-content">
-            
-                      <a href="#">
-                        <h4 class="showcase-title">shampoo conditioner packs</h4>
-                      </a>
-            
-                      <a href="#" class="showcase-category">cosmetics</a>
-            
-                      <div class="price-box">
-                        <p class="price">$20.00</p>
-                        <del>$30.00</del>
-                      </div>
-            
-                    </div>
-            
-                  </div>
-            
-                  <div class="showcase">
-            
-                    <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/jewellery-1.jpg" alt="rose gold peacock earrings" class="showcase-img"
-                        width="70">
-                    </a>
-            
-                    <div class="showcase-content">
-            
-                      <a href="#">
-                        <h4 class="showcase-title">Rose Gold Peacock Earrings</h4>
-                      </a>
-            
-                      <a href="#" class="showcase-category">jewellery</a>
-            
-                      <div class="price-box">
-                        <p class="price">$20.00</p>
-                        <del>$30.00</del>
-                      </div>
-            
-                    </div>
-            
-                  </div>
             
                 </div>
             
