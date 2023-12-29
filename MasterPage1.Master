@@ -1,0 +1,1138 @@
+﻿
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage1.master.cs" Inherits="WebApp2.MasterPage1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <!--
+   - custom css link
+ -->
+      <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ <link rel="stylesheet" href="./assets/css/style-prefix.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+ <!--
+   - google font link
+ -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+   rel="stylesheet">
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+ <header>
+
+   <div class="header-top">
+
+     <div class="container">
+
+
+       <ul class="header-social-container">
+           <!-- 
+         <li>
+           <a href="#" class="social-link">
+             <ion-icon name="logo-facebook"></ion-icon>
+           </a>
+         </li>
+
+         <li>
+           <a href="#" class="social-link">
+             <ion-icon name="logo-twitter"></ion-icon>
+           </a>
+         </li>
+
+         <li>
+           <a href="#" class="social-link">
+             <ion-icon name="logo-instagram"></ion-icon>
+           </a>
+         </li>
+
+         <li>
+           <a href="#" class="social-link">
+             <ion-icon name="logo-linkedin"></ion-icon>
+           </a>
+         </li>
+
+       </ul>
+
+       <div class="header-alert-news">
+         <p>
+           <b>Free Shipping</b>
+           This Week Order Over - $55
+         </p>
+       </div>
+
+       <div class="header-top-actions">
+
+         <select name="currency">
+
+           <option value="usd">USD &dollar;</option>
+           <option value="eur">EUR &euro;</option>
+
+         </select>
+
+         <select name="language">
+
+           <option value="en-US">English</option>
+           <option value="es-ES">Espa&ntilde;ol</option>
+           <option value="fr">Fran&ccedil;ais</option>
+
+         </select>
+           --> 
+       </div>
+
+     </div>
+
+   </div>
+
+   <div class="header-main">
+
+     <div class="container">
+
+       <a href="#index.aspx" class="header-logo">
+         <img src="./assets/images/logo/logo.svg" alt="Anon's logo" width="120" height="36">
+       </a>
+
+       <div class="header-search-container">
+
+            <asp:TextBox ID="txtSearch" PlaceHolder="Search for an item" class="search-field" runat="server"></asp:TextBox>
+             <asp:Button ID="btnSearch"
+      runat="server"
+      Style="padding: 0; margin: 0; border: none; color: black; background-color: #48C9B0"
+      Text="Go"
+      Height="30"
+      Width="40"
+      OnClick="btnSearch_Click" />
+            </div>
+
+   
+
+           <!-- 
+         <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+
+         <button class="search-btn">
+           <ion-icon name="search-outline"></ion-icon>
+         </button>
+               --> 
+      
+
+
+ 
+
+       <div class="header-user-actions">
+
+        <button class="action-btn">
+           <ion-icon name="person-outline"></ion-icon>
+         </button> 
+
+               
+      <!-- sign in logic --> 
+            <button type="button"
+                onclick="document.getElementById('id01').style.display='block'"
+                style="float: left; width: 100%; height: 100%; text-align: left; padding: 15px;">
+                Sign In</button>
+         
+         
+            <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+            </button>
+
+            <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+            </button>
+        
+    </div>
+   
+</div>
+
+<div id="id01" class="modal">
+      <%-- <form class="modal-content" action="#"> --%>
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        
+        <div class="modalcontainer">
+           <p style="font-family: Verdana, serif; font-size: 20px;">Sign In</p> 
+            <asp:Textbox ID="txt_Email" CssClass="inputtxt" Placeholder="Email Address" TextMode="Email" runat="server" ></asp:Textbox>
+            <asp:TextBox ID="txt_Password" CssClass="inputtxt" Placeholder="Password" TextMode="Password" runat="server"></asp:TextBox>
+           
+             <span class="psw"><a href="#">Forgot your password?</a></span><br /> 
+
+             <asp:Button ID="btnSignIn" Class="btnsignin" Text="Secure Sign In" runat="server"  OnClick="btnSignIn_Click" />
+
+        </div>
+            
+
+        <div class="modalcontainer2">
+            <a class="signinFB">
+                 <ion-icon name="logo-facebook"></ion-icon>
+
+            Sign in with Facebook
+            </a>
+            <a class="signinGoogle">
+              
+                 <ion-icon name="logo-google"></ion-icon>
+            Sign in with Google
+            </a>
+            <p style="text-align:center; font-size:10px;padding-top: 50px"> By siging in you agree to our terms of use and privacy policy</p>
+
+        </div>
+     <div class="register">
+            Don't have an account? 
+        <a onclick="document.getElementById('id01').style.display='none'; document.getElementById('id02').style.display='block';">Create an Account</a>
+
+         <br/>
+ <a style="color: #EC7063; font-size: 12px;" onclick="document.getElementById('id01').style.display='none';document.getElementById('id03').style.display='block';">Sign in as Admin</a>
+    
+        </div>
+
+
+
+       <%-- </form>--%>
+</div>
+ <div id="id02" class="modal">
+    <div class="modal-content">
+         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <div class="modalcontainer">
+           <p style="font-size: 20px; text-align: center;">Create an Account</p> 
+            <asp:TextBox ID="txt_FirstName" CssClass="inputtxt" Placeholder="First Name"  runat="server"></asp:TextBox>                       
+            <asp:TextBox ID="txt_LastName"  CssClass="inputtxt" Placeholder="Last Name" runat="server"></asp:TextBox> 
+            <asp:TextBox ID="txt_RegEmail"  CssClass="inputtxt" Placeholder="Email Address" TextMode="Email" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_RegPassword" CssClass="inputtxt" Placeholder="Password" TextMode="Password"   runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_ConfirmPW" CssClass="inputtxt" Placeholder="Confirm Password"  TextMode="Password" runat="server"></asp:TextBox>
+            <asp:CompareValidator ID="CompareValidatorPW" runat="server" ErrorMessage="Passwords must match" ControlToCompare="txt_RegPassword" ControlToValidate="txt_ConfirmPW"></asp:CompareValidator> </div>
+               
+           <asp:Button ID="btnRegister" runat="server" Text="Create Account" Class="btnsignin" OnClick="btnRegister_Click"/></div>
+        <div class="register">
+            Already have an account? 
+                <a onclick="document.getElementById('id01').style.display='block'; document.getElementById('id02').style.display='none';"
+        style="font-size: small; text-align: center">Sign In
+        </a>
+     </div>
+     </div>
+
+
+
+
+     <!-- end of sign in logic --> 
+
+
+
+
+
+        
+
+       </div>
+
+   
+
+   <nav class="desktop-navigation-menu">
+
+     <div class="container">
+
+       <ul class="desktop-menu-category-list">
+
+         <li class="menu-category">
+           <a href="#" class="menu-title">Home</a>
+         </li>
+
+         <li class="menu-category">
+           <a href="#" class="menu-title">Categories</a>
+
+           <div class="dropdown-panel">
+
+             <ul class="dropdown-panel-list">
+
+               <li class="menu-title">
+                 <a href="#">Electronics</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Desktop</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Laptop</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Camera</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Tablet</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Headphone</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">
+                   <img src="./assets/images/electronics-banner-1.jpg" alt="headphone collection" width="250"
+                     height="119">
+                 </a>
+               </li>
+
+             </ul>
+
+             <ul class="dropdown-panel-list">
+
+               <li class="menu-title">
+                 <a href="#">Men's</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Formal</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Casual</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Sports</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Jacket</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Sunglasses</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">
+                   <img src="./assets/images/mens-banner.jpg" alt="men's fashion" width="250" height="119">
+                 </a>
+               </li>
+
+             </ul>
+
+             <ul class="dropdown-panel-list">
+
+               <li class="menu-title">
+                 <a href="#">Women's</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Formal</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Casual</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Perfume</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Cosmetics</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Bags</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">
+                   <img src="./assets/images/womens-banner.jpg" alt="women's fashion" width="250" height="119">
+                 </a>
+               </li>
+
+             </ul>
+
+             <ul class="dropdown-panel-list">
+
+               <li class="menu-title">
+                 <a href="#">Electronics</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Smart Watch</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Smart TV</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Keyboard</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Mouse</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">Microphone</a>
+               </li>
+
+               <li class="panel-list-item">
+                 <a href="#">
+                   <img src="./assets/images/electronics-banner-2.jpg" alt="mouse collection" width="250" height="119">
+                 </a>
+               </li>
+
+             </ul>
+
+           </div>
+         </li>
+
+         <li class="menu-category">
+           <a href="#" class="menu-title">Men's</a>
+
+           <ul class="dropdown-list">
+
+             <li class="dropdown-item">
+               <a href="#">Shirt</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Shorts & Jeans</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Safety Shoes</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Wallet</a>
+             </li>
+
+           </ul>
+         </li>
+
+         <li class="menu-category">
+           <a href="#" class="menu-title">Women's</a>
+
+           <ul class="dropdown-list">
+
+             <li class="dropdown-item">
+               <a href="#">Dress & Frock</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Earrings</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Necklace</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Makeup Kit</a>
+             </li>
+
+           </ul>
+         </li>
+
+         <li class="menu-category">
+           <a href="#" class="menu-title">Jewelry</a>
+
+           <ul class="dropdown-list">
+
+             <li class="dropdown-item">
+               <a href="#">Earrings</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Couple Rings</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Necklace</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Bracelets</a>
+             </li>
+
+           </ul>
+         </li>
+
+         <li class="menu-category">
+           <a href="#" class="menu-title">Perfume</a>
+
+           <ul class="dropdown-list">
+
+             <li class="dropdown-item">
+               <a href="#">Clothes Perfume</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Deodorant</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Flower Fragrance</a>
+             </li>
+
+             <li class="dropdown-item">
+               <a href="#">Air Freshener</a>
+             </li>
+
+           </ul>
+         </li>
+
+         <li class="menu-category">
+           <a href="#" class="menu-title">Blog</a>
+         </li>
+
+         <li class="menu-category">
+           <a href="#" class="menu-title">Hot Offers</a>
+         </li>
+
+       </ul>
+
+     </div>
+
+   </nav>
+
+   <div class="mobile-bottom-navigation">
+
+     <button class="action-btn" data-mobile-menu-open-btn>
+       <ion-icon name="menu-outline"></ion-icon>
+     </button>
+
+     <button class="action-btn">
+       <ion-icon name="bag-handle-outline"></ion-icon>
+
+       <span class="count">0</span>
+     </button>
+
+     <button class="action-btn">
+       <ion-icon name="home-outline"></ion-icon>
+     </button>
+
+     <button class="action-btn">
+       <ion-icon name="heart-outline"></ion-icon>
+
+       <span class="count">0</span>
+     </button>
+
+     <button class="action-btn" data-mobile-menu-open-btn>
+       <ion-icon name="grid-outline"></ion-icon>
+     </button>
+
+   </div>
+
+   <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+     <div class="menu-top">
+       <h2 class="menu-title">Menu</h2>
+
+       <button class="menu-close-btn" data-mobile-menu-close-btn>
+         <ion-icon name="close-outline"></ion-icon>
+       </button>
+     </div>
+
+     <ul class="mobile-menu-category-list">
+
+       <li class="menu-category">
+         <a href="#" class="menu-title">Home</a>
+       </li>
+
+       <li class="menu-category">
+
+         <button class="accordion-menu" data-accordion-btn>
+           <p class="menu-title">Men's</p>
+
+           <div>
+             <ion-icon name="add-outline" class="add-icon"></ion-icon>
+             <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+           </div>
+         </button>
+
+         <ul class="submenu-category-list" data-accordion>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Shirt</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Shorts & Jeans</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Safety Shoes</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Wallet</a>
+           </li>
+
+         </ul>
+
+       </li>
+
+       <li class="menu-category">
+
+         <button class="accordion-menu" data-accordion-btn>
+           <p class="menu-title">Women's</p>
+
+           <div>
+             <ion-icon name="add-outline" class="add-icon"></ion-icon>
+             <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+           </div>
+         </button>
+
+         <ul class="submenu-category-list" data-accordion>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Dress & Frock</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Earrings</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Necklace</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Makeup Kit</a>
+           </li>
+
+         </ul>
+
+       </li>
+
+       <li class="menu-category">
+
+         <button class="accordion-menu" data-accordion-btn>
+           <p class="menu-title">Jewelry</p>
+
+           <div>
+             <ion-icon name="add-outline" class="add-icon"></ion-icon>
+             <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+           </div>
+         </button>
+
+         <ul class="submenu-category-list" data-accordion>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Earrings</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Couple Rings</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Necklace</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Bracelets</a>
+           </li>
+
+         </ul>
+
+       </li>
+
+       <li class="menu-category">
+
+         <button class="accordion-menu" data-accordion-btn>
+           <p class="menu-title">Perfume</p>
+
+           <div>
+             <ion-icon name="add-outline" class="add-icon"></ion-icon>
+             <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+           </div>
+         </button>
+
+         <ul class="submenu-category-list" data-accordion>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Clothes Perfume</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Deodorant</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Flower Fragrance</a>
+           </li>
+
+           <li class="submenu-category">
+             <a href="#" class="submenu-title">Air Freshener</a>
+           </li>
+
+         </ul>
+
+       </li>
+
+       <li class="menu-category">
+         <a href="#" class="menu-title">Blog</a>
+       </li>
+
+       <li class="menu-category">
+         <a href="#" class="menu-title">Hot Offers</a>
+       </li>
+
+     </ul>
+
+     <div class="menu-bottom">
+
+       <ul class="menu-category-list">
+
+         <li class="menu-category">
+
+           <button class="accordion-menu" data-accordion-btn>
+             <p class="menu-title">Language</p>
+
+             <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+           </button>
+
+           <ul class="submenu-category-list" data-accordion>
+
+             <li class="submenu-category">
+               <a href="#" class="submenu-title">English</a>
+             </li>
+
+             <li class="submenu-category">
+               <a href="#" class="submenu-title">Espa&ntilde;ol</a>
+             </li>
+
+             <li class="submenu-category">
+               <a href="#" class="submenu-title">Fren&ccedil;h</a>
+             </li>
+
+           </ul>
+
+         </li>
+
+         <li class="menu-category">
+           <button class="accordion-menu" data-accordion-btn>
+             <p class="menu-title">Currency</p>
+             <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+           </button>
+
+           <ul class="submenu-category-list" data-accordion>
+             <li class="submenu-category">
+               <a href="#" class="submenu-title">USD &dollar;</a>
+             </li>
+
+             <li class="submenu-category">
+               <a href="#" class="submenu-title">EUR &euro;</a>
+             </li>
+           </ul>
+         </li>
+
+       </ul>
+
+       <ul class="menu-social-container">
+
+         <li>
+           <a href="#" class="social-link">
+             <ion-icon name="logo-facebook"></ion-icon>
+           </a>
+         </li>
+
+         <li>
+           <a href="#" class="social-link">
+             <ion-icon name="logo-twitter"></ion-icon>
+           </a>
+         </li>
+
+         <li>
+           <a href="#" class="social-link">
+             <ion-icon name="logo-instagram"></ion-icon>
+           </a>
+         </li>
+
+         <li>
+           <a href="#" class="social-link">
+             <ion-icon name="logo-linkedin"></ion-icon>
+           </a>
+         </li>
+
+       </ul>
+
+     </div>
+
+   </nav>
+
+ </header>
+      
+
+
+
+
+
+
+
+
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    
+  <!-- 
+    - #FOOTER
+  -->
+
+      <footer>
+
+    <div class="footer-category">
+
+      <div class="container">
+
+        <h2 class="footer-category-title">Brand directory</h2>
+
+        <div class="footer-category-box">
+
+          <h3 class="category-box-title">Fashion :</h3>
+
+          <a href="#" class="footer-category-link">T-shirt</a>
+          <a href="#" class="footer-category-link">Shirts</a>
+          <a href="#" class="footer-category-link">shorts & jeans</a>
+          <a href="#" class="footer-category-link">jacket</a>
+          <a href="#" class="footer-category-link">dress & frock</a>
+          <a href="#" class="footer-category-link">innerwear</a>
+          <a href="#" class="footer-category-link">hosiery</a>
+
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">footwear :</h3>
+        
+          <a href="#" class="footer-category-link">sport</a>
+          <a href="#" class="footer-category-link">formal</a>
+          <a href="#" class="footer-category-link">Boots</a>
+          <a href="#" class="footer-category-link">casual</a>
+          <a href="#" class="footer-category-link">cowboy shoes</a>
+          <a href="#" class="footer-category-link">safety shoes</a>
+          <a href="#" class="footer-category-link">Party wear shoes</a>
+          <a href="#" class="footer-category-link">Branded</a>
+          <a href="#" class="footer-category-link">Firstcopy</a>
+          <a href="#" class="footer-category-link">Long shoes</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">jewellery :</h3>
+        
+          <a href="#" class="footer-category-link">Necklace</a>
+          <a href="#" class="footer-category-link">Earrings</a>
+          <a href="#" class="footer-category-link">Couple rings</a>
+          <a href="#" class="footer-category-link">Pendants</a>
+          <a href="#" class="footer-category-link">Crystal</a>
+          <a href="#" class="footer-category-link">Bangles</a>
+          <a href="#" class="footer-category-link">bracelets</a>
+          <a href="#" class="footer-category-link">nosepin</a>
+          <a href="#" class="footer-category-link">chain</a>
+          <a href="#" class="footer-category-link">Earrings</a>
+          <a href="#" class="footer-category-link">Couple rings</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">cosmetics :</h3>
+        
+          <a href="#" class="footer-category-link">Shampoo</a>
+          <a href="#" class="footer-category-link">Bodywash</a>
+          <a href="#" class="footer-category-link">Facewash</a>
+          <a href="#" class="footer-category-link">makeup kit</a>
+          <a href="#" class="footer-category-link">liner</a>
+          <a href="#" class="footer-category-link">lipstick</a>
+          <a href="#" class="footer-category-link">prefume</a>
+          <a href="#" class="footer-category-link">Body soap</a>
+          <a href="#" class="footer-category-link">scrub</a>
+          <a href="#" class="footer-category-link">hair gel</a>
+          <a href="#" class="footer-category-link">hair colors</a>
+          <a href="#" class="footer-category-link">hair dye</a>
+          <a href="#" class="footer-category-link">sunscreen</a>
+          <a href="#" class="footer-category-link">skin loson</a>
+          <a href="#" class="footer-category-link">liner</a>
+          <a href="#" class="footer-category-link">lipstick</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Popular Categories</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Fashion</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Electronic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Cosmetic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Health</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Watches</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Products</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Our Company</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Legal Notice</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Terms and conditions</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">About us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Secure payment</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Services</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              419 State 414 Rte
+              Beaver Dams, New York(NY), 14812, USA
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">Anon</a> all rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script>
+     //As mentioned, this is DOM Manipulation that we will use when we code
+     //the sign in feature. For now, ignore this code.
+     var modal = document.getElementById('id01');
+
+     window.onclick = function (event) {
+         if (event.target == modal) {
+             modal.style.display = "none";
+         }
+     }
+
+
+
+ </script>
+
+
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   
+
+
+</body>
+</html>
+
