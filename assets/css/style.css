@@ -474,13 +474,13 @@ span.psw {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1; /* Sit on top */
-    left: 0;
+    z-index: 1055; /* Sit on top */
+   
     margin-top: 10px;
     width: 40%;
     height: auto;
-    background-color: white;
-    color: black;
+    
+
 }
 
 .modal-content {
@@ -506,7 +506,7 @@ span.psw {
 
 .inputtxt {
     width: 100%;
-    height: 25px;
+    height: 35px;
     border: 0.7px solid !important;
     font-family: 'Poppins', sans-serif;
 }
