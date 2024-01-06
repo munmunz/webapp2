@@ -1089,7 +1089,7 @@
 
 
                     <div class="showcase-content">
-                        <a href="#" class="showcase-category">Shirts</a>
+                        <a href="#" class="showcase-category"> <%# Eval("ProductCategory") %> </a>
                         <a href="#">
                             <h3 class="showcase-title"><%# Eval("ProductName") %></h3>
                         </a>
