@@ -398,6 +398,8 @@
         <ItemTemplate>
             <div class="showcase">
                 <div class="showcase-banner">
+
+                     <asp:ImageButton PostBackUrl='<%# ResolveClientUrl("ProductDetails.aspx?ProdID=" + Eval("ID") ) %>' runat="server" />
                     <!-- Product Image -->
                     <img src='<%# Eval("ProductImage") %>' alt='<%# Eval("ProductName") %>' width="300" class="product-img default">
                     <img src='<%# Eval("ProductImage") %>' alt='<%# Eval("ProductName") %>' width="300" class="product-img hover">

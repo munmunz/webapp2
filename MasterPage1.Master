@@ -121,8 +121,9 @@
 
      <div class="container">
 
-       <a href="#index.aspx" class="header-logo">
-         <img src="./assets/images/logo/logo.svg" alt="Anon's logo" width="120" height="36">
+       <a href="#index.aspx" class="header-logo"  style="color: black;">
+      <!--    <img src="./assets/images/logo/logo.svg" alt="Anon's logo" width="120" height="36"> -->
+           <p> AmpleCart </p>
        </a>
 
 <div class="header-search-container">
