@@ -27,7 +27,23 @@ namespace WebApp2
                 BindProductData();
             }
         }
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            // Your logic for dynamically setting the master page
+            if (Session["CHANGE_MASTERPAGE"] != null && Session["CHANGE_MASTERPAGE2"] == null)
+            {
+                this.MasterPageFile = Session["CHANGE_MASTERPAGE"].ToString();
+            }
 
+            if (Session["CHANGE_MASTERPAGE2"] != null && Session["CHANGE_MASTERPAGE"] == null)
+            {
+                this.MasterPageFile = Session["CHANGE_MASTERPAGE2"].ToString();
+            }
+            if (Session["CHANGE_MASTERPAGE2"] == null && Session["CHANGE_MASTERPAGE"] == null)
+            {
+                this.MasterPageFile = "~/MasterPage1.Master";
+            }
+        }
         private void BindProductData()
         {
             // Connect to the database and fetch product data

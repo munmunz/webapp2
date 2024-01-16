@@ -1,5 +1,5 @@
 ﻿
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Afterlogin.Master.cs" Inherits="WebApp2.MasterPage1" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Afterlogin.Master.cs" Inherits="WebApp2.Afterlogin" %>
 
 <!DOCTYPE html>
 
@@ -122,7 +122,7 @@
 
        <a href="index.aspx" class="header-logo"  style="color: black;">
       <!--    <img src="./assets/images/logo/logo.svg" alt="Anon's logo" width="120" height="36"> -->
-           <p> AmpleCart </p>
+           <p> AmpleCart (AFTERLOGIN) </p>
        </a>
 
 <div class="header-search-container">
@@ -215,75 +215,9 @@
    
 </div>
 
-       <!-- 
-<div class="modal fade" id="id01" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="modalcontainer">
-                    <p style="font-family: Verdana, serif; font-size: 20px;">Sign In</p> 
-                    <asp:TextBox ID="txt_Email" CssClass="inputtxt form-control" Placeholder="Email Address" TextMode="Email" runat="server"></asp:TextBox><br />
-                    <asp:TextBox ID="txt_Password" CssClass="inputtxt form-control" Placeholder="Password" TextMode="Password" runat="server"></asp:TextBox>
-                    <span class="psw"><a href="#">Forgot your password?</a></span><br /> 
-                    <asp:Button ID="btnSignIn" Class="btnsignin btn btn-primary" Text="Secure Sign In" runat="server" OnClick="btnSignIn_Click" />
-                </div><br />
-                               <div class="modalcontainer2">
-                    <a class="btn btn-primary d-flex align-items-center">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                        <span class="ml-2">Sign in with Facebook</span>
-                    </a><br />
-                    <a class="btn btn-danger d-flex align-items-center">
-                        <ion-icon name="logo-google"></ion-icon>
-                        <span class="ml-2">Sign in with Google</span>
-                    </a>
-                    <p class="mt-3 text-center" style="font-size:10px;">By signing in you agree to our terms of use and privacy policy</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <p class="register">Don't have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#id02">Create an Account</a></p>
-                <p class="register"><a href="#" style="color: #EC7063; font-size: 12px;" data-dismiss="modal" data-toggle="modal" data-target="#id03">Sign in as Admin</a></p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="id02" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Create an Account</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-                       <div class="modal-body">
-                <div class="modalcontainer">
-                    <asp:TextBox ID="txt_FirstName" CssClass="inputtxt form-control mb-3" Placeholder="First Name" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txt_LastName" CssClass="inputtxt form-control mb-3" Placeholder="Last Name" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txt_RegEmail" CssClass="inputtxt form-control mb-3" Placeholder="Email Address" TextMode="Email" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txt_RegPassword" CssClass="inputtxt form-control mb-3" Placeholder="Password" TextMode="Password" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txt_ConfirmPW" CssClass="inputtxt form-control mb-3" Placeholder="Confirm Password" TextMode="Password" runat="server"></asp:TextBox>
-                    <asp:CompareValidator ID="CompareValidatorPW" runat="server" ErrorMessage="Passwords must match" ControlToCompare="txt_RegPassword" ControlToValidate="txt_ConfirmPW"></asp:CompareValidator>
-                </div>
-            </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <asp:Button ID="btnRegister" runat="server" Text="Create Account" Class="btnsignin btn btn-primary" OnClick="btnRegister_Click"/>
-    
-                    <div class="register">
-                        Already have an account? 
-                        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#id01">Sign In</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+   
 
-           --> 
+        
 
 
      <!-- end of sign in logic --> 
