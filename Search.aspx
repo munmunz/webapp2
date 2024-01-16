@@ -399,11 +399,20 @@
             <div class="showcase">
                 <div class="showcase-banner">
 
-                     <asp:ImageButton PostBackUrl='<%# ResolveClientUrl("ProductDetails.aspx?ProdID=" + Eval("ID") ) %>' runat="server" />
-                    <!-- Product Image -->
+                      <asp:ImageButton 
+                    ID="imgButton" 
+                    PostBackUrl='<%# ResolveClientUrl("ProductDetails.aspx?ProdID=" + Eval("ID")) %>' 
+                    CssClass="bookimage" 
+                    ImageUrl='<%# Eval("ProductImage") %>' 
+                    runat="server" />
+
+                    <!-- Product Image 
                     <img src='<%# Eval("ProductImage") %>' alt='<%# Eval("ProductName") %>' width="300" class="product-img default">
                     <img src='<%# Eval("ProductImage") %>' alt='<%# Eval("ProductName") %>' width="300" class="product-img hover">
                     
+                     <asp:ImageButton PostBackUrl='<%# ResolveClientUrl("ProductDetails.aspx?ProdID=" + Eval("ID") ) %>' runat="server" />
+                        --> 
+
                     <div class="showcase-actions">
                         <!-- Action Buttons (e.g., Add to Wishlist, View, etc.) -->
                         <button class="btn-action">

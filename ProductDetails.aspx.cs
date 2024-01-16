@@ -34,10 +34,12 @@ namespace WebApp2
             prod = aProd.GetProduct(prodID);
 
             // Set the labels with product details
+            
             lblProductName.Text = prod.ProductName;
             lblProductDesc.Text = prod.ProductDescription;
             lblProductPrice.Text = prod.Price.ToString("C");
-            lblProductCategory.Text = prod.ProductCategory;
+            // lblProductCategory.Text = prod.ProductCategory;
+            imgProductDetails.ImageUrl = prod.ProductImage;
         }
 
 

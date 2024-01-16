@@ -32,6 +32,13 @@ namespace WebApp2
             {
                 conn.Open();
 
+
+                // hash password
+                // password complexity 
+                // sql stored procedure? 
+
+
+
                 using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM REGISTRATION WHERE Email = @Email", conn))
                 {
                     cmd.Parameters.AddWithValue("@Email", txt_RegEmail.Text);
@@ -106,3 +113,4 @@ namespace WebApp2
 
     }
 }
+

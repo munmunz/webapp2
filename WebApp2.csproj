@@ -152,27 +152,44 @@
     <Content Include="images\Cotton Short Sleeve Shirt.jpg" />
     <Content Include="images\Cropped Skipper Short Sleeve Polo Shirt.jpg" />
     <Content Include="images\Extra Fine Merino Crew Neck Sweater.jpg" />
+    <Content Include="images\Fitbit Luxe Fitness Tracker2.png" />
+    <Content Include="images\Fujifilm Instax Mini Camera2.png" />
+    <Content Include="images\JBL Portable Speaker2.png" />
+    <Content Include="images\JBL Wireless On Ear Headphones2.png" />
+    <Content Include="images\Nintendo Switch Console2.png" />
+    <Content Include="images\Nintendo Switch Lite Console2.png" />
     <Content Include="images\Premium Linen Long Sleeve Shirt.jpg" />
     <Content Include="images\Razer Hammerhead Earbuds.png" />
     <Content Include="images\Satin Slip Dress1.jpg" />
     <Content Include="images\shirt1.jpg" />
     <Content Include="images\shirt2.jpg" />
     <Content Include="images\shirt3.jpg" />
+    <Content Include="images\SKG Smart Watch2.png" />
     <Content Include="images\Smooth Cotton Tiered Mini Dress.jpg" />
     <Content Include="images\Smooth Cotton Volume Half Sleeve Dress.jpg" />
     <Content Include="images\Sony Wireless Headphones.png" />
+    <Content Include="images\Vintage Cocktail Swing Dress.png" />
+    <Content Include="images\VR Headset2.png" />
     <Content Include="index.aspx" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hash.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Afterlogin.Master.cs">
+      <DependentUpon>Afterlogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Afterlogin.Master.designer.cs">
+      <DependentUpon>Afterlogin.Master</DependentUpon>
     </Compile>
     <Compile Include="MasterPage1.Master.cs">
       <DependentUpon>MasterPage1.Master</DependentUpon>
@@ -200,6 +217,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage1.Master" />
+    <Content Include="Afterlogin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

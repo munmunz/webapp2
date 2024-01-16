@@ -1,8 +1,8 @@
 ﻿
-
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage1.master.cs" Inherits="WebApp2.MasterPage1" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage1.Master.cs" Inherits="WebApp2.MasterPage1" %>
 
 <!DOCTYPE html>
+
 
 <html>
 <head runat="server">
@@ -121,7 +121,7 @@
 
      <div class="container">
 
-       <a href="#index.aspx" class="header-logo"  style="color: black;">
+       <a href="index.aspx" class="header-logo"  style="color: black;">
       <!--    <img src="./assets/images/logo/logo.svg" alt="Anon's logo" width="120" height="36"> -->
            <p> AmpleCart </p>
        </a>
@@ -300,7 +300,7 @@
        <ul class="desktop-menu-category-list">
 
          <li class="menu-category">
-           <a href="#" class="menu-title">Home</a>
+           <a href="index.aspx" class="menu-title">Home</a>
          </li>
 
          <li class="menu-category">
@@ -314,6 +314,8 @@
                  <a href="#">Electronics</a>
                </li>
 
+
+                 <!-- 
                <li class="panel-list-item">
                  <a href="#">Desktop</a>
                </li>
@@ -321,14 +323,16 @@
                <li class="panel-list-item">
                  <a href="#">Laptop</a>
                </li>
+                     --> 
 
                <li class="panel-list-item">
                  <a href="#">Camera</a>
                </li>
-
+                 <!-- 
                <li class="panel-list-item">
                  <a href="#">Tablet</a>
                </li>
+                     --> 
 
                <li class="panel-list-item">
                  <a href="#">Headphone</a>
@@ -361,6 +365,7 @@
                  <a href="#">Sports</a>
                </li>
 
+                 <!-- 
                <li class="panel-list-item">
                  <a href="#">Jacket</a>
                </li>
@@ -368,6 +373,8 @@
                <li class="panel-list-item">
                  <a href="#">Sunglasses</a>
                </li>
+                     --> 
+
 
                <li class="panel-list-item">
                  <a href="#">
@@ -395,6 +402,7 @@
                  <a href="#">Perfume</a>
                </li>
 
+                 <!-- 
                <li class="panel-list-item">
                  <a href="#">Cosmetics</a>
                </li>
@@ -402,6 +410,8 @@
                <li class="panel-list-item">
                  <a href="#">Bags</a>
                </li>
+
+
 
                <li class="panel-list-item">
                  <a href="#">
@@ -421,6 +431,7 @@
                  <a href="#">Smart Watch</a>
                </li>
 
+                 <!-- 
                <li class="panel-list-item">
                  <a href="#">Smart TV</a>
                </li>
@@ -428,13 +439,13 @@
                <li class="panel-list-item">
                  <a href="#">Keyboard</a>
                </li>
-
+                     --> 
                <li class="panel-list-item">
-                 <a href="#">Mouse</a>
+                 <a href="#"> Fitness Tracker </a>
                </li>
 
                <li class="panel-list-item">
-                 <a href="#">Microphone</a>
+                 <a href="#"> VR Headset</a>
                </li>
 
                <li class="panel-list-item">
@@ -496,6 +507,7 @@
            </ul>
          </li>
 
+           <!-- 
          <li class="menu-category">
            <a href="#" class="menu-title">Jewelry</a>
 
@@ -544,6 +556,7 @@
            </ul>
          </li>
 
+           --> 
          <li class="menu-category">
            <a href="#" class="menu-title">Blog</a>
          </li>
@@ -656,6 +669,7 @@
              <a href="#" class="submenu-title">Earrings</a>
            </li>
 
+             <!-- 
            <li class="submenu-category">
              <a href="#" class="submenu-title">Necklace</a>
            </li>
@@ -663,7 +677,7 @@
            <li class="submenu-category">
              <a href="#" class="submenu-title">Makeup Kit</a>
            </li>
-
+                 --> 
          </ul>
 
        </li>
