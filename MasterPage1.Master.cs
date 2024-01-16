@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Policy;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -42,6 +43,17 @@ namespace WebApp2
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
+
+            // Validate password complexity
+            string password = txt_RegPassword.Text;
+
+            if (!IsPasswordComplex(password))
+            {
+                // Display an alert informing the user about password requirements
+                Response.Write("<script>alert('Password must meet complexity requirements.');</script>");
+                return;
+            }
+
             Guid newGUID = Guid.NewGuid();
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ShoppingDB"].ConnectionString);
 
@@ -88,6 +100,16 @@ namespace WebApp2
             txt_RegEmail.Text = "";
         }
 
+        private bool IsPasswordComplex(string password)
+        {
+            // Define the regex pattern for password complexity
+            string regexPattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$";
+
+            // Use regex to check if the password meets the complexity requirements
+            return Regex.IsMatch(password, regexPattern);
+        }
+
+
 
         protected void btnSignIn_Click(object sender, EventArgs e)
         {
@@ -133,6 +155,59 @@ namespace WebApp2
 
             txt_Email.Text = ""; //clears textbox after login
         }
+
+        protected void btnAdminSignIn_Click(object sender, EventArgs e)
+        {
+            Session["Admin"] = txt_AdminEmail.Text;
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SunnyCS"].ConnectionString);
+
+            conn.Open();
+
+            string checkuser = "SELECT COUNT(*) FROM [ADMIN] WHERE Email = @email";
+
+            SqlCommand com = new SqlCommand(checkuser, conn);
+            com.Parameters.AddWithValue("@email", txt_AdminEmail.Text);
+
+            int temp = Convert.ToInt32(com.ExecuteScalar().ToString());
+
+            conn.Close();
+
+            if (temp == 1)
+            {
+                conn.Open();
+
+                string checkPasswordQuery = "SELECT AdminID, Password FROM [ADMIN] WHERE Email = @email2";
+
+                SqlCommand pwcomm = new SqlCommand(checkPasswordQuery, conn);
+                pwcomm.Parameters.AddWithValue("@email2", txt_AdminEmail.Text);
+
+                SqlDataReader reader = pwcomm.ExecuteReader();
+                reader.Read();
+                string password = reader["Password"].ToString();
+                string UserId = reader["AdminID"].ToString();
+                reader.Close();
+
+                if (password == txt_AdminPassword.Text)
+                {
+                    Response.Redirect("Admin-index.aspx");
+                }
+                else
+                {
+                    reader.Close();
+                    Response.Write("<script language=javascript>alert('Password or Username is not correct')</script>");
+                }
+            }
+            else
+            {
+                Response.Write("<script language=javascript>alert('Password or UserName is not correct')</script>");
+            }
+
+            txt_AdminEmail.Text = "";
+        }
     }
+
+
+
+
 }
 
