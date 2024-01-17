@@ -37,6 +37,14 @@ namespace WebApp2
                 this.MasterPageFile = Session["CHANGE_MASTERPAGE2"].ToString();
             }
         }
+
+        protected void btnSignOut_Click(object sender, EventArgs e)
+        {
+            Session["CHANGE_MASTERPAGE2"] = "~/MasterPage1.Master";
+            Session["CHANGE_MASTERPAGE"] = null;
+            Response.Redirect(Request.Url.AbsoluteUri);
+        }
+
     }
 }
 

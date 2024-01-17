@@ -194,7 +194,7 @@
 
            <a href="Admin-Users.aspx">Manage Users</a>
 
-           <a href="ChartControl.aspx">View Data</a>
+           <a href="ChartControl1.aspx">View Data</a>
 
         <button class="action-btn">
            <ion-icon name="person-outline"></ion-icon>

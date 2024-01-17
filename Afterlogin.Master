@@ -185,6 +185,15 @@
  
 
        <div class="header-user-actions">
+
+           <asp:Button
+    ID="btnSignOut"
+    Style="padding: 7px; font-family: 'Oswald', sans-serif; color: #EC7063; border: 0.5px solid; background-color: inherit;"
+    runat="server"
+    Text="Sign Out"
+    OnClick="btnSignOut_Click" />
+
+
                 <!-- sign in logic --> 
            <!-- 
   <button type="button" class="btn" data-toggle="modal" data-target="#id01">

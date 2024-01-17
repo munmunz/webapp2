@@ -153,7 +153,7 @@
     <Content Include="assets\images\womens-banner.jpg" />
     <Content Include="assets\js\script.js" />
     <Content Include="BestSeller.aspx" />
-    <Content Include="ChartControl.aspx" />
+    <Content Include="ChartControl1.aspx" />
     <Content Include="images\Airpods.jpg" />
     <Content Include="images\Cotton Short Sleeve Shirt.jpg" />
     <Content Include="images\Cropped Skipper Short Sleeve Polo Shirt.jpg" />
@@ -220,12 +220,12 @@
     <Compile Include="BestSeller.aspx.designer.cs">
       <DependentUpon>BestSeller.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ChartControl.aspx.cs">
-      <DependentUpon>ChartControl.aspx</DependentUpon>
+    <Compile Include="ChartControl1.aspx.cs">
+      <DependentUpon>ChartControl1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ChartControl.aspx.designer.cs">
-      <DependentUpon>ChartControl.aspx</DependentUpon>
+    <Compile Include="ChartControl1.aspx.designer.cs">
+      <DependentUpon>ChartControl1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Hash.cs" />
     <Compile Include="index.aspx.cs">
