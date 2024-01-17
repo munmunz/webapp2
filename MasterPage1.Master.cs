@@ -159,7 +159,7 @@ namespace WebApp2
         protected void btnAdminSignIn_Click(object sender, EventArgs e)
         {
             Session["Admin"] = txt_AdminEmail.Text;
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SunnyCS"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ShoppingDB"].ConnectionString);
 
             conn.Open();
 

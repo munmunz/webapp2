@@ -107,4 +107,19 @@ public class Product
 
         return productDetail;
     }
+
+    public int UserDelete(string ID)
+    {
+        string queryStr = "DELETE FROM Registration WHERE ID=@ID";
+        SqlConnection conn = new SqlConnection(_connStr);
+        SqlCommand cmd = new SqlCommand(queryStr, conn);
+        cmd.Parameters.AddWithValue("@ID", ID);
+        conn.Open();
+        int nofRow = 0;
+        nofRow = cmd.ExecuteNonQuery();
+        conn.Close();
+        return nofRow;
+    }
+
+
 }

@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,6 +68,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin-BestSeller.aspx" />
+    <Content Include="Admin-index.aspx" />
+    <Content Include="Admin-Users.aspx" />
     <Content Include="App_Data\ShoppingDB.mdf" />
     <Content Include="App_Data\ShoppingDB_log.ldf">
       <DependentUpon>ShoppingDB.mdf</DependentUpon>
@@ -148,6 +152,8 @@
     <Content Include="assets\images\testimonial-1.jpg" />
     <Content Include="assets\images\womens-banner.jpg" />
     <Content Include="assets\js\script.js" />
+    <Content Include="BestSeller.aspx" />
+    <Content Include="ChartControl.aspx" />
     <Content Include="images\Airpods.jpg" />
     <Content Include="images\Cotton Short Sleeve Shirt.jpg" />
     <Content Include="images\Cropped Skipper Short Sleeve Polo Shirt.jpg" />
@@ -176,8 +182,50 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin-BestSeller.aspx.cs">
+      <DependentUpon>Admin-BestSeller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-BestSeller.aspx.designer.cs">
+      <DependentUpon>Admin-BestSeller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-index.aspx.cs">
+      <DependentUpon>Admin-index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-index.aspx.designer.cs">
+      <DependentUpon>Admin-index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-Users.aspx.cs">
+      <DependentUpon>Admin-Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-Users.aspx.designer.cs">
+      <DependentUpon>Admin-Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="BasePage1.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BestSeller.aspx.cs">
+      <DependentUpon>BestSeller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BestSeller.aspx.designer.cs">
+      <DependentUpon>BestSeller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChartControl.aspx.cs">
+      <DependentUpon>ChartControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChartControl.aspx.designer.cs">
+      <DependentUpon>ChartControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="Hash.cs" />
     <Compile Include="index.aspx.cs">
@@ -221,6 +269,7 @@
   <ItemGroup>
     <Content Include="MasterPage1.Master" />
     <Content Include="Afterlogin.Master" />
+    <Content Include="AdminMaster.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
